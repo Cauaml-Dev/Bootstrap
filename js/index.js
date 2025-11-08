@@ -1,19 +1,56 @@
-const pages = [
-    {
-        id:"p01",
-        name:"home",
-        url:"./pages/home/home.html"
-    }
-]
+const paginas = {
+  home: '../home/home.html',
+  eventos: '../eventos/eventos.html',
+  sobre: '../sobre/sobre.html',
+  admin: '../eventos/admin.html',
+  alimentos: '../eventos/alimentos.html',
+  metalurgia: '../eventos/metalurgia.html',
+  ti: '../eventos/ti.html'
+};
 
-function openPage(url){
-    const iframe = document.getElementById("pages");
+// Mapeamento de mensagens recebidas para páginas
+const mensagensParaPaginas = {
+  'abrir-eventos': { url: paginas.eventos, id: 'eventos' },
+  'abrir-admin': { url: paginas.admin },
+  'abrir-alimentos': { url: paginas.alimentos },
+  'abrir-metalurgia': { url: paginas.metalurgia },
+  'abrir-ti': { url: paginas.ti }
+};
 
-    if(!iframe) return alert("ERRO!");
+function abrirPagina(url, idAtivo = null) {
+  const iframe = document.getElementById("project-frame");
+  if (!iframe) return;
+  iframe.src = url || "";
+  iframe.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    iframe.src = url || '';
+  Object.keys(paginas).forEach(id => {
+    const botao = document.getElementById(id);
+    if (botao) botao.classList.remove("active");
+  });
+
+  if (idAtivo) {
+    const botaoAtivo = document.getElementById(idAtivo);
+    if (botaoAtivo) botaoAtivo.classList.add("active");
+  }
 }
 
-document.getElementById("home").addEventListener("click", () => {
-    openPage(pages[0].url);
-})
+document.addEventListener("DOMContentLoaded", () => {
+  abrirPagina(paginas.home, "home");
+
+  Object.keys(paginas).forEach(id => {
+    const botao = document.getElementById(id);
+    if (botao) {
+      botao.addEventListener("click", (e) => {
+        e.preventDefault();
+        abrirPagina(paginas[id], id);
+      });
+    }
+  });
+
+  window.addEventListener("message", (event) => {
+    const destino = mensagensParaPaginas[event.data];
+    if (destino) {
+      abrirPagina(destino.url, destino.id);
+    }
+  });
+});

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portal SENAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho fixo com logo SENAI e barra de pesquisa -->
+    <header class="navbar navbar-dark fixed-top shadow-sm px-3" style="background:#fa0101;">
+        <div class="d-flex align-items-center justify-content-between w-100">
+
+            <!-- Logo SENAI com sombra branca -->
+            <div class="senai-logo bg-white p-1 rounded shadow-sm" style="height: 45px;">
+                <img src="../img/SENAI_São_Paulo_logo.png" alt="Logo SENAI" style="height: 100%; object-fit: contain;">
+            </div>
+
+            <!-- Barra de pesquisa no canto direito -->
+            <div class="search-bar me-2">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="form-control" placeholder="Buscar...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main class="container-fluid">
+        <div class="row">
+
+            <!-- Menu lateral com links de navegação -->
+            <aside class="col-12 col-md-3 col-lg-2 text-white p-3 mt-5 min-vh-100" style="background:#fa0101;">
+                <nav class="nav flex-column gap-2">
+                    <a class="nav-link text-white bg-transparent" id="home" href="#">Home</a>
+                    <a class="nav-link text-white bg-transparent" id="eventos" href="#">Eventos</a>
+                    <a class="nav-link text-white bg-transparent" id="sobre" href="#">Sobre</a>
+                    <a class="nav-link text-white bg-transparent" id="pagamentos" href="#">Pagamentos</a>
+                </nav>
+            </aside>
+
+            <!-- Área de exibição onde as páginas são carregadas via iframe -->
+            <section class="col-12 col-md-9 col-lg-10 mt-5 pt-3">
+                <div class="position-relative mb-4">
+                    <div class="ratio ratio-16x9 border rounded">
+                        <iframe id="project-frame" src="" frameborder="0" allowfullscreen class="w-100 h-100"></iframe>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Ícones do Bootstrap (necessário para o ícone da lupa) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Administração e Gestão</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-light">
+  <main class="container py-5 text-center">
+    <h2 class="text-danger mb-4">Administração e Gestão</h2>
+    <p class="mb-4">Cursos voltados para liderança, planejamento estratégico e gestão empresarial.</p>
+
+    <div class="row justify-content-center g-4">
+
+      <!-- Curso 1: Gestão Empresarial -->
+      <div class="col-md-4">
+        <img src="../img/gestao.jpg" alt="Curso de Gestão Empresarial" class="curso-img mb-3">
+        <div class="text-center">
+          <button class="btn btn-danger" onclick="mostrarModal('Gestão Empresarial', '100 horas', '05/08/2023', '30/09/2023', '18h às 22h', 'SENAI Campinas — Rua da Produção, 100', 'R$ 120,00', true)">Ver detalhes</button>
+        </div>
+      </div>
+
+      <!-- Curso 2: Planejamento Estratégico -->
+      <div class="col-md-4">
+        <img src="../img/planer.jpg" alt="Curso de Planejamento Estratégico" class="curso-img mb-3">
+        <div class="text-center">
+          <button class="btn btn-danger" onclick="mostrarModal('Planejamento Estratégico', '80 horas', '10/09/2023', '20/10/2023', '08h às 12h', 'SENAI São Paulo — Av. Central, 200', 'R$ 0,00', true)">Ver detalhes</button>
+        </div>
+      </div>
+
+      <!-- Curso 3: Marketing Digital -->
+      <div class="col-md-4">
+        <img src="../img/marketing-digital.jpg" alt="Curso de Marketing Digital" class="curso-img mb-3">
+        <div class="text-center">
+          <button class="btn btn-danger" onclick="mostrarModal('Marketing Digital', '60 horas', '01/10/2023', '15/11/2023', '19h às 21h', 'SENAI Online', 'R$ 90,00', true)">Ver detalhes</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modal dinâmico -->
+    <div class="modal fade" id="modalCurso" tabindex="-1" aria-labelledby="modalCursoLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="modalCursoLabel">Curso</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-start">
+            <p><strong>Carga horária:</strong> <span id="carga"></span></p>
+            <p><strong>Início:</strong> <span id="inicio"></span></p>
+            <p><strong>Término:</strong> <span id="termino"></span></p>
+            <p><strong>Horário:</strong> <span id="horario"></span></p>
+            <p><strong>Local:</strong> <span id="local"></span></p>
+            <p><strong>Valor:</strong> <span id="valor"></span></p>
+            <p id="descricao">Curso voltado para desenvolvimento de competências em gestão e liderança organizacional.</p>
+            <div class="text-center mt-4" id="botao-pagamento" style="display: none;">
+              <a href="../pagamento/pagamento.html" class="btn btn-success">Ir para pagamento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/eventos.js"></script>
+</body>
+</html>

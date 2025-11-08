@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portal SENAI - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Seção de boas-vindas -->
+    <section class="container text-center py-5">
+        <h1 class="display-5 fw-bold text-danger">Bem-vindo ao Portal de Eventos SENAI</h1>
+        <p class="lead mb-4">Participe de experiências que conectam você à indústria, à inovação e ao conhecimento.</p>
+        <a href="#" class="btn btn-danger btn-lg" onclick="window.parent.postMessage('abrir-eventos', '*')">Ver
+            eventos</a>
+    </section>
+
+    <!-- Carrossel de destaque -->
+    <section class="container mb-5">
+        <div id="carouselSenai" class="carousel slide shadow rounded" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="../img/up_ag_13463_fispal-studiof.jpg" class="d-block w-100" alt="Feira de Tecnologia"
+                        style="height: 350px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Feira de Tecnologia</h5>
+                        <p>Explore as inovações da indústria 4.0</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/semana_da_industria-b-06.png" class="d-block w-100" alt="Semana da Indústria"
+                        style="height: 350px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Semana da Indústria</h5>
+                        <p>Conecte-se com empresas e oportunidades</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/img_81_240123_cc3cc206-0afa-4786-b39f-c92a819b9624_p.png" class="d-block w-100" alt="Cursos Gratuitos"
+                        style="height: 350px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block bg-primary bg-opacity-75 rounded p-2">
+                        <h5 class="text-white">Cursos Gratuitos</h5>
+                        <p class="text-white">Aprenda com os melhores profissionais</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSenai" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSenai" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
