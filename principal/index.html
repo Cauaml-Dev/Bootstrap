@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portal SENAI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -21,12 +22,46 @@
                 <img src="../img/SENAI_São_Paulo_logo.png" alt="Logo SENAI" style="height: 100%; object-fit: contain;">
             </div>
 
-            <!-- Barra de pesquisa no canto direito -->
-            <div class="search-bar me-2">
-                <i class="bi bi-search search-icon"></i>
-                <input type="text" class="form-control" placeholder="Buscar...">
-            </div>
-        </div>
+<!-- Barra de pesquisa com filtros na sidebar -->
+<div class="mt-4">
+  <div class="input-group">
+    <input type="text" class="form-control form-control-sm" id="campo-busca" placeholder="Buscar...">
+    <button class="btn btn-light btn-sm" type="button" id="btn-filtro" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-three-dots"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end p-3" style="min-width: 220px;">
+      <div class="mb-2">
+        <label for="filtro-categoria" class="form-label text-dark">Categoria</label>
+        <select class="form-select form-select-sm" id="filtro-categoria">
+          <option value="">Todas</option>
+          <option value="TI">TI</option>
+          <option value="Metalurgia">Metalurgia</option>
+          <option value="Alimentos">Alimentos</option>
+          <option value="Administração">Administração</option>
+        </select>
+      </div>
+      <div>
+        <label for="filtro-mes" class="form-label text-dark">Mês</label>
+        <select class="form-select form-select-sm" id="filtro-mes">
+          <option value="">Todos</option>
+          <option value="01">Janeiro</option>
+          <option value="02">Fevereiro</option>
+          <option value="03">Março</option>
+          <option value="04">Abril</option>
+          <option value="05">Maio</option>
+          <option value="06">Junho</option>
+          <option value="07">Julho</option>
+          <option value="08">Agosto</option>
+          <option value="09">Setembro</option>
+          <option value="10">Outubro</option>
+          <option value="11">Novembro</option>
+          <option value="12">Dezembro</option>
+        </select>
+      </div>
+    </ul>
+  </div>
+</div>
+
     </header>
 
     <!-- Conteúdo principal da página -->
@@ -38,8 +73,9 @@
                 <nav class="nav flex-column gap-2">
                     <a class="nav-link text-white bg-transparent" id="home" href="#">Home</a>
                     <a class="nav-link text-white bg-transparent" id="cursos" href="#">Cursos</a>
-                    <a class="nav-link text-white bg-transparent" id="sobre" href="#">Sobre</a>
+                    <a class="nav-link text-white bg-transparent" id="eventos" href="#">Eventos</a>
                     <a class="nav-link text-white bg-transparent" id="pagamentos" href="#">Pagamentos</a>
+                    <a class="nav-link text-white bg-transparent" id="sobre" href="#">Sobre</a>
                 </nav>
             </aside>
 

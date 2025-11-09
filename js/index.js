@@ -1,12 +1,13 @@
 const paginas = {
   home: '../home/home.html',
-  eventos: '../cursos/cursos.html',
+  cursos: '../cursos/cursos.html',
   sobre: '../sobre/sobre.html',
   admin: '../cursos/admin.html',
   alimentos: '../cursos/alimentos.html',
   metalurgia: '../cursos/metalurgia.html',
   ti: '../cursos/ti.html',
-  pagamentos: '../pagamentos/pagamentos.html'
+  pagamentos: '../pagamentos/pagamentos.html',
+  eventos: '../eventos/eventos.html'
 };
 
 // Mapeamento de mensagens recebidas para páginas
